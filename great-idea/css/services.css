@@ -66,7 +66,6 @@ h1, h2, h3, h4, h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 .container {
 	display: flex;
-    /*flex-direction: column;*/
     flex-wrap: wrap;
 	width: 800px;
 	height: 1550px;
@@ -131,10 +130,16 @@ header nav a {
 .main-content-section .main-content-div {
     display: flex;
     flex-direction: column;
-	width: 375px;
+    width: 375px;    
     height: 200px;
     border: 1px solid black;
     justify-content: space-around;
+    
+}
+
+/*creates left margin space between the headers, paragraphs, and buttons in the main content section boxes*/
+.main-content-section .main-content-div h2, p, button {
+    margin-left: 5px;
 }
    
 
@@ -156,7 +161,7 @@ header nav a {
     display: flex;
     width: 375px;
     flex-direction: column;   
-    justify-content: space-around; /*space between each item on the cross (y) axis*/
+    justify-content: space-around; /*space around each item on the cross (y) axis because display is column*/
     
 }
 
@@ -174,8 +179,11 @@ header nav a {
     
 }
 
-.services-section .services-facts-div ul {
+.services-section .services-facts-div ul{
     list-style-type: square;
+    list-style-position: inside;
+    /*margin-left: 5%;*/
+    
 }
 
 footer {
@@ -186,18 +194,58 @@ footer {
 	align-items: center;
 }
 
-/***Stretch Task***/
+/***STRETCH TASK***/
 
 /***W3Schools July 10, 2019: "We should change the design when the width gets larger than 768px. This will make our design Mobile First"***/
 
 /* A media query that defines a rule for screens smaller than 768 pixels.*/
 @media only screen and (max-width: 768px) {
 
+    /*height auto - the element will automatically adjust its height to allow its content to be displayed correctly.*/
+    /*width: 100% - Make this element's content area exactly equal to the explicit width of its parent — but only if its parent has an explicit width. */
+    /*margin: 0 - removes extra spaces created by margins around the specified elements */
+    /*when the screen is resized below 768px, each indicated div or area wraps and occupies the entire screen width thereby stacking on top of each other*/
     .container {
+        width: 100%;
         height: auto;
+        justify-content: space-between;
+        align-items: space-around; 
     }
 
     header {
+        width: 100%;
+        height: auto;   
+        justify-content: flex-start;
+        align-items: flex-start;          
+	
+    }
+       
+    header nav ul {
+        width: 100%;
+        height: auto;   
+    }
+
+    header nav {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    } 
+    
+    header nav a {
+        margin:0 3px;
+        font-size: 100%;	
+        font-family: 'Bangers', cursive;	
+    }
+
+   
+    header .logo-div {
+        width: 50%;
+        height: auto;
+        margin-left: 5%;
+    }
+
+    header .logo-div img  {
         width: 100%;
         height: auto;
     }
@@ -205,10 +253,12 @@ footer {
     .services-header-section {
         width: 100%;
         height: auto;
+        margin-bottom: 2%;
     }
 
     .main-content-section {
         height: auto;
+        
     }
 
     .services-section {
@@ -217,6 +267,14 @@ footer {
    
     .main-content-section .main-content-div {
         width: 100%;
+        height: auto;
+        margin-bottom: 2%;
+        
+        
+    }
+
+    .services-section {
+        margin-bottom: 2%;
     }
 
     .services-section .services-facts-div {
@@ -247,7 +305,10 @@ footer {
     }
 
     footer {
-        width: 75%;
+       width: 100%;
+
+       /*left align or display the footer content at the start of the flex container when the screen is resized*/
+       justify-content: flex-start;
         
     }
 
