@@ -64,3 +64,134 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 900px;
+	/*height: 1200px;*/
+	margin: auto;
+	justify-content: space-around;
+	align-content: space-between;
+	
+}
+
+header {
+	display: flex;
+	width: 900px;
+	background-color: dodgerblue;	
+	padding: 10px;
+	/*position: fixed;
+	z-index: 1;*/
+	justify-content: center;
+	justify-content: space-between;
+	align-items: center;	
+}
+
+header nav a {
+	margin:0 20px;
+	text-decoration: none;
+	color: black;
+	font-size: 16px;	
+	font-family: 'Bangers', cursive;	
+}
+
+.get-started {
+	display: flex;
+	width: 900px;
+	height: 350px;
+	text-align: center;	
+	justify-content: center;
+	align-items: center;
+	padding-top: 50px;	
+	
+}
+
+.get-started .get-started-details {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	height: 300px;	
+	justify-content: center;
+	align-items: center;
+}
+
+.get-started .get-started-details h1 {
+	font-size: 60px;
+}
+
+.get-started button {
+	background-color: dodgerblue;
+	font-weight: bold;
+	padding: 5px 30px;	
+}
+
+.get-started .innovation-logo {
+	display: flex;
+	width: 400px;
+	height: 300px;
+	/**/
+	padding: 50px 0;
+	justify-content: center;
+	align-items: center;	
+}
+
+.get-started .innovation-logo img {
+	width: 280px;
+	height: 280px;	
+}
+
+.main-content {
+	display: flex;
+	flex-wrap: wrap;
+	width: 900px;
+	height: 550px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;	
+	justify-content: space-between; /*space between each item on the main axis*/
+	align-content: space-around;	/*space around each item on the cross axis*/
+	
+}
+
+.main-content .features {
+	width: 425px;
+	height: auto;
+}
+
+.main-content .about {
+	width: 425px;
+	height: auto;	
+}
+
+.main-content .main-content-image img {
+	width: 900px;
+}
+
+.main-content .services {
+	width: 275px;
+}
+
+.main-content .product {
+	width: 275px;
+	
+}
+
+.main-content .vision {
+	width: 275px;
+	
+}
+
+.contact {
+	display: flex;	
+	flex-direction: column;
+	width: 900px;
+	height: 150px;
+	justify-content: space-around; /*space between each item on the cross axis*/
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
