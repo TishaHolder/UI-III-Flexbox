@@ -185,7 +185,8 @@ header nav a {
 	flex-direction: column;
 	width: 900px;
 	height: 150px;
-	justify-content: space-around; /*space between each item on the cross axis*/
+	margin-top: 20px;
+	justify-content: space-around; /*space around each item on the y axis because display is column*/
 }
 
 footer {
